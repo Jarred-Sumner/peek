@@ -20,6 +20,8 @@ Then, header over to the test page:
   <img src="./test-button-img.png" height="48" />
 </a>
 
+<br />
+
 If you want to configure git-peek, header over to the main [git-peek repo](https://github.com/Jarred-Sumner/git-peek).
 
 Note: currently only macOS is supported. Any non-terminal based editor should work (sorry vim users! I don't know how to make it work in vim yet.)
