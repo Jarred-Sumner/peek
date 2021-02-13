@@ -14,11 +14,11 @@ Next, you'll need to register the `git-peek://` URL handler. Just run this comna
 git peek -r
 ```
 
-Then, click this button to test it:
+Then, header over to the test page:
 
-[Test button with url](git-peek://Jarred-Sumner/git-peek/blob/main/TEST-PAGE.md)
-
-If it works, your editor will now open.
+<a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/TEST-PAGE.md">
+  <img src="./test-button-img.png" />
+</a>
 
 If you want to configure git-peek, header over to the main [git-peek repo](https://github.com/Jarred-Sumner/git-peek).
 
