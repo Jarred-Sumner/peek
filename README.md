@@ -2,8 +2,6 @@
 
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip"><img src="./big-webp.webp" height=400 /></a>
 
-<a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip"><img src="./screenshot-1.png" height=400 /></a>
-
 Instantly open files, pull requests, and repositories from GitHub in your local editor. Read, search, and review code from the comfort of your own local editing environment.
 
 It stores the files in a temporary directory, and automatically deletes the repository from your computer when you close your editor.
@@ -24,6 +22,7 @@ Then just drag and drop the `.xpi` file into Firefox.
 
 It'll be in the Firefox Addon Marketplace eventually. It's being reviewed.
 
+<img src="./screenshot-1.png" height=400 />
 <img src="./screenshot-2.png" height=400 />
 <img src="./screenshot-3.png" height=400 />
 
