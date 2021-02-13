@@ -1,6 +1,6 @@
-# 1-click from GitHub to editor
+# 1-click from GitHub to local editor
 
-<img src="./screenshot-1.png" height=400 />
+<a<img src="./screenshot-1.png" height=400 />
 
 Instantly open files, pull requests, and repositories from GitHub in your local editor. Read, search, and review code from the comfort of your own local editing environment.
 
