@@ -16,7 +16,7 @@ git peek -r
 
 Then, click this button to test it:
 
-<a href="git-peek://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/TEST-PAGE.md"><img src="./test-button-img.png" height="48"/></a>
+<a href="git-peek:///github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/TEST-PAGE.md"><img src="./test-button-img.png" height="48"/></a>
 
 If it works, your editor will now open.
 
