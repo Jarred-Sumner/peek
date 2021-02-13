@@ -20,8 +20,6 @@ Then just drag and drop the `.xpi` file into Firefox.
 
 It'll be in the Firefox Addon Marketplace eventually. It's being reviewed.
 
-## More explanation
-
 <img src="./screenshot-2.png" height=400 />
 <img src="./screenshot-3.png" height=400 />
 
