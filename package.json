@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "dotenv-cli": "^4.0.0",
     "esbuild": "^0.8.44",
     "web-ext-types": "^3.2.1"
   },
@@ -12,6 +13,7 @@
     "prebuild": "rm -rf ./extension/dist",
     "build": "cd extension; node build.js; cd ../",
     "create-zip": "ditto -c -k --sequesterRsrc ./extension ./git-peek-chrome-extension.zip",
+    "do-sign": "cd extension && WEB_EXT_API_KEY=$WEB_EXT_API_KEY WEB_EXT_API_SECRET=$WEB_EXT_API_SECRET web-ext sign",
     "preship": "pnpm create-zip"
   },
   "name": "git-peek-chrome-extension"

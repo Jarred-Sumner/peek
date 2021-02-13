@@ -8,14 +8,21 @@ This extension requires installing git-peek to register the URL handler – head
 
 ## Installation
 
-To install the chrome extension:
+### Chrome
 
-1. [Download the extension](`https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip`)
+1. [Download git-peek for Chrome](`https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip`)
+
 2. Drag and drop the `.zip` file into `chrome://extensions`
 
 It'll be in the Chrome Store eventually. The source for the extension is in this repo if you want to look at the code yourself.
 
-Most of the real code for this is in the [`git-peek`](https://github.com/jarred-sumner/git-peek) repository. All this does is add buttons that open the `git-peek://` URL handler with the right URLs.
+### Firefox
+
+1. [Download git-peek for Firefox](`https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip`)
+
+2. Drag and drop the file into Firefox.
+
+It'll be in the Firefox Addon Marketplace eventually. It's being reviewed.
 
 <img src="./screenshot-2.png" height=400 />
 <img src="./screenshot-3.png" height=400 />
