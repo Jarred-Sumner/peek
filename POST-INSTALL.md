@@ -17,7 +17,7 @@ git peek -r
 Then, header over to the test page:
 
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/TEST-PAGE.md">
-  <img src="./test-button-img.png" />
+  <img src="./test-button-img.png" height="48" />
 </a>
 
 If you want to configure git-peek, header over to the main [git-peek repo](https://github.com/Jarred-Sumner/git-peek).
