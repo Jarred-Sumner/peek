@@ -6,15 +6,13 @@ Instantly open files, pull requests, and repositories from GitHub in your local 
 
 This extension requires installing git-peek to register the URL handler – head over to https://github.com/jarred-sumner/git-peek to do that.
 
-## Installation
-
-#### [Download git-peek for Chrome](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/chrome-extension-git-peek.zip)
+### [Download git-peek for Chrome](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/chrome-extension-git-peek.zip)
 
 Then drag and drop the `.zip` file into `chrome://extensions`
 
 It'll be in the Chrome Store eventually. The source for the extension is in this repo if you want to look at the code yourself.
 
-#### [Download git-peek for Firefox](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/firefox-addon-git-peek.xpi)
+### [Download git-peek for Firefox](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/firefox-addon-git-peek.xpi)
 
 Then just drag and drop the `.xpi` file into Firefox.
 
