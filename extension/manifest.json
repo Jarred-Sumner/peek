@@ -1,0 +1,23 @@
+{
+  "name": "git peek for GitHub",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "One-click from GitHub to editor",
+  "homepage_url": "https://github.com/Jarred-Sumner/git-peek-chrome-extension",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["dist/background.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs", "https://*.github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.github.com/*"],
+      "js": ["dist/inject/inject.js"]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "esbuild": "^0.8.44",
+    "web-ext-types": "^3.2.1"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.20",
+    "webext-dynamic-content-scripts": "^7.1.0",
+    "zippack": "^0.1.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf ./extension/dist",
+    "build": "cd extension; node build.js; cd ../",
+    "create-zip": "ditto -c -k --sequesterRsrc ./extension ./git-peek-chrome-extension.zip",
+    "preship": "pnpm create-zip"
+  },
+  "name": "git-peek-chrome-extension"
+}
