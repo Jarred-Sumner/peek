@@ -1,4 +1,4 @@
-# One-click from GitHub to editor
+# 1-click from GitHub to editor
 
 <img src="./screenshot-1.png" height=400 />
 

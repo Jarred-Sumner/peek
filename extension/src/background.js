@@ -23,7 +23,10 @@ if (browser.tabs) {
 
 browser.runtime.onInstalled.addListener(function (object) {
   chrome.tabs.create(
-    { url: "https://github.com/Jarred-Sumner/git-peek-chrome-extension" },
+    {
+      url:
+        "https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/POST-INSTALL.md",
+    },
     function (tab) {}
   );
 });
