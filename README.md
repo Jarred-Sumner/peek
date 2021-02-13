@@ -1,6 +1,6 @@
 # 1-click from GitHub to local editor
 
-<a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip"><img src="./big-webp.webp" height=300 /></a>
+<a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip"><img src="./big-webp.webp" height=250 /></a>
 
 Instantly open files, pull requests, and repositories from GitHub in your local editor. Read, search, and review code from the comfort of your own local editing environment.
 
@@ -16,8 +16,8 @@ git-peek stores the files in a temporary directory, and automatically deletes th
 
 Supports Visual Studio Code and Sublime Text on macOS. Probably not vim, unless its a GUI version.
 
-<img src="./screenshot-1.png" height=300 />
-<img src="./screenshot-2.png" height=300 />
-<img src="./screenshot-3.png" height=300 />
+<img src="./screenshot-1.png" height=250 />
+<img src="./screenshot-2.png" height=250 />
+<img src="./screenshot-3.png" height=250 />
 
 Basically all this extension does is add three "Open" buttons to GitHub. These "Open" buttons open `git-peek://github-url-in-here`, which triggers `git-peek` to very quickly fetch the file/branch/repo/pull request and open it in your local editor. All the magic is in `git-peek`. This just adds some buttons so you don't have to paste links into your terminal.
