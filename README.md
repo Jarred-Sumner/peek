@@ -10,7 +10,7 @@ This extension requires installing git-peek to register the URL handler – head
 
 ### Chrome
 
-**[Download git-peek for Chrome](`https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/chrome-extension-git-peek.zip`)**
+**[Download git-peek for Chrome](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/chrome-extension-git-peek.zip)**
 
 2. Drag and drop the `.zip` file into `chrome://extensions`
 
@@ -18,7 +18,7 @@ It'll be in the Chrome Store eventually. The source for the extension is in this
 
 ### Firefox
 
-**[Download git-peek for Firefox](`https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/firefox-addon-git-peek.xpi`)**
+**[Download git-peek for Firefox](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/firefox-addon-git-peek.xpi)**
 
 2. Drag and drop the file into Firefox.
 
