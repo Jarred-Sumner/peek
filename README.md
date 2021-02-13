@@ -1,5 +1,7 @@
 # 1-click from GitHub to local editor
 
+<a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip"><img src="./big-webp.webp" height=400 /></a>
+
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/v0/git-peek-chrome-extension.zip"><img src="./screenshot-1.png" height=400 /></a>
 
 Instantly open files, pull requests, and repositories from GitHub in your local editor. Read, search, and review code from the comfort of your own local editing environment.
