@@ -5,7 +5,7 @@ You'll need to have [`git-peek`](https://github.com/jarred-sumner/git-peek) inst
 To do that, run this:
 
 ```bash
-npm install -g git-peek
+npm install -g @jarred/git-peek
 ```
 
 Next, you'll need to register the `git-peek://` URL handler. Just run this:
@@ -14,7 +14,7 @@ Next, you'll need to register the `git-peek://` URL handler. Just run this:
 git peek -r
 ```
 
-Then, header over to the test page:
+Then, head over to the test page:
 
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/TEST-PAGE.md">
   <img src="./test-button-img.png" height="48" />
