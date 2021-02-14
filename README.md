@@ -4,15 +4,19 @@
 
 Instantly open files, pull requests, and repositories from GitHub in your local editor. Read, search, and review code from the comfort of your own local editing environment.
 
-git-peek stores the files in a temporary directory, and automatically deletes the repository from your computer when you close your editor. [git-peek](https://github.com/Jarred-Sumner/git-peek) is also available as a CLI, this is the browser extension.
+`git-peek` stores the files in a temporary directory, and automatically deletes the repository from your computer when you close your editor. [`git-peek`](https://github.com/Jarred-Sumner/git-peek) is also available as a CLI, this is the browser extension.
 
-## [Download git-peek for Chrome](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/chrome-extension-git-peek.zip)
+## Installation
+
+### [Download git-peek for Chrome](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/chrome-extension-git-peek.zip)
 
 <sup>Then drag and drop the `.zip` file into `chrome://extensions`</sup>
 
-## [Download git-peek for Firefox](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/firefox-addon-git-peek.xpi)
+### [Download git-peek for Firefox](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/firefox-addon-git-peek.xpi)
 
 <sup>Then just drag and drop the `.xpi` file into Firefox.</sup>
+
+Once you install the extension, you will need to ensure `git-peek` is installed and configure your system to open `git-peek` when a `git-peek://` url is opened. Please see [post-installation instructions](POST-INSTALL.md) for more information. (the page should open automatically if you dragged and dropped the extension file to install it)
 
 Supports Visual Studio Code and Sublime Text on macOS. Probably not vim, unless its a GUI version.
 
