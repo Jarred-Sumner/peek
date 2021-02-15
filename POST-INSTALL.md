@@ -1,6 +1,6 @@
 ## Installing git-peek
 
-You'll need to have [`git-peek`](https://github.com/jarred-sumner/git-peek) installed for this to work and only macOS is supported for now.
+You'll need to have [`git-peek`](https://github.com/jarred-sumner/git-peek) installed for this to work and only Windwos & macOS are supported for now.
 
 To do that, run this:
 
