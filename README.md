@@ -8,11 +8,9 @@ git-peek stores the files in a temporary directory, and automatically deletes th
 
 ## [Download git-peek for Chrome](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/chrome-extension-git-peek.zip)
 
-<sup>Then drag and drop the `.zip` file into `chrome://extensions`</sup>
+<sup>Then **extract the `.zip`** and drag and drop the folder into `chrome://extensions`</sup>
 
-## [Download git-peek for Firefox](https://github.com/Jarred-Sumner/1-click-from-github-to-editor/releases/download/1.0/firefox-addon-git-peek.xpi)
-
-<sup>Then just drag and drop the `.xpi` file into Firefox.</sup>
+## [Download git-peek for Firefox](https://addons.mozilla.org/en-US/firefox/addon/git-peek-for-github/)
 
 Supports Visual Studio Code and Sublime Text on macOS. Probably not vim, unless its a GUI version.
 
