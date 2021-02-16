@@ -8,7 +8,7 @@ In `$HOME/.git-peek`:
 GITHUB_TOKEN="*******"
 ```
 
-On Windows, this file is located in `%HOMEDRIVE%\HOMEPATH\.git-peek`. It isn't automatically created, so you should create it.
+On Windows, this file is located in `%HOMEDRIVE%\%HOMEPATH%\.git-peek`. It isn't automatically created, so you should create it.
 
 You can run `git peek --env` to print the current environemnt:
 
