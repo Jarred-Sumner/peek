@@ -1,14 +1,14 @@
-## Installing git-peek
+## Install git-peek
 
-You'll need to have [`git-peek`](https://github.com/jarred-sumner/git-peek) installed for this to work and only Windwos & macOS are supported for now.
-
-To do that, run this:
+You'll need to have [`git-peek`](https://github.com/jarred-sumner/git-peek) installed for this to work.
 
 ```bash
 npm install -g @jarred/git-peek
 ```
 
-Next, you'll need to register the `git-peek://` URL handler. Just run this:
+## Make the Peek button work
+
+Register the `git-peek://` URL handler:
 
 ```bash
 git peek -r
@@ -20,13 +20,13 @@ Then, head over to the test page:
   <img src="./test-button-img.png" height="48" />
 </a>
 
-### Private repoistories
+### Private repositories
 
-To use Peek with a private repository, set your `$GITHUB_TOKEN` in `~/.git-peek`:
+To use Peek with a private repository, set `$GITHUB_TOKEN` in `%HOMEDRIVE%\%HOMEPATH%\.git-peek`:
 
 ```
 GITHUB_TOKEN="*******"
 EDITOR="code" # optional
 ```
 
-Read more on the docs for [`git-peek`](https://github.com/jarred-sumner/git-peek).
+If you're having trouble with this, [here is more text to read](/PRIVATE-REPOSITORIES.md).
