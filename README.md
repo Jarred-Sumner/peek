@@ -18,4 +18,4 @@ Supports Visual Studio Code and Sublime Text on Windows & macOS. Probably not vi
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/screenshot-2.png?raw=true"><img src="./screenshot-2.png" height=200 /></a>
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/screenshot-3.png?raw=true"><img src="./screenshot-3.png" height=200 /></a>
 
-Basically all this extension does is add three "Open" buttons to GitHub. These "Open" buttons open `git-peek://github-url-in-here`, which triggers `git-peek` to very quickly fetch the file/branch/repo/pull request and open it in your local editor. All the magic is in `git-peek`. This just adds some buttons so you don't have to paste links into your terminal.
+This adds "Peek" buttons to Github that open `git-peek://github-url-in-here`, which triggers `git-peek` to very quickly fetch the file/branch/repo/pull request and open it in your local editor. All the magic is in `git-peek`. This just adds some buttons so you don't have to paste links into your terminal.
