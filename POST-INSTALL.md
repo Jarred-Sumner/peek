@@ -1,5 +1,7 @@
 ## Install git-peek
 
+[//]: <!- **If you're seeing this secret message, that means it worked!** -->
+
 You'll need to have [`git-peek`](https://github.com/jarred-sumner/git-peek) installed for this to work.
 
 ```bash
@@ -7,6 +9,8 @@ npm install -g @jarred/git-peek
 ```
 
 ## Make the Peek button work
+
+[//]: <!- **If you're seeing this secret message, that means it worked!** -->
 
 Register the `git-peek://` URL handler:
 
@@ -30,3 +34,5 @@ EDITOR="code" # optional
 ```
 
 If you're having trouble with this, [here is more text to read](/PRIVATE-REPOSITORIES.md).
+
+[//]: <!- **If you're seeing this secret message, that means it worked!** -->
