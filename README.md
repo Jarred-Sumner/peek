@@ -1,4 +1,4 @@
-# 1-click from GitHub to local editor
+# Peek – 1-click from GitHub to local editor
 
 <a target="_blank" href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/big-webp.webp?raw=true"><img src="./big-webp.webp" height=200 /></a>
 
