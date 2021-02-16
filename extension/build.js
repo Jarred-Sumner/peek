@@ -8,6 +8,6 @@ build({
   outdir: "./dist",
   outbase: "src",
   platform: "browser",
-  minify: false,
+  minify: !watch,
   watch,
 }).then((a) => console.log("Built.", a.warnings, a.outputFiles));
