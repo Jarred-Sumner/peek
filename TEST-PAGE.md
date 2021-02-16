@@ -5,3 +5,9 @@ Do you see an "Open (git-peek)" button in the header? Try clicking it. If it wor
 To use `git-peek`, with private repositories, [configure your environment](https://github.com/Jarred-Sumner/git-peek#private-repositories--choosing-an-editor)
 
 If you want to configure git-peek, header over to the main [git-peek repo](https://github.com/Jarred-Sumner/git-peek).
+
+<super-secret-message>
+
+If you're seeing this message, it means it worked.
+
+</super-secret-message>
