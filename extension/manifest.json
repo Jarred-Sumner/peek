@@ -1,5 +1,5 @@
 {
-  "name": "git peek for GitHub",
+  "name": "Peek for GitHub",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "One-click from GitHub to editor",
@@ -13,11 +13,12 @@
     "scripts": ["dist/background.js"],
     "persistent": false
   },
-  "permissions": ["tabs", "https://*.github.com/*"],
+  "permissions": ["tabs", "https://*.github.com/*", "storage"],
   "content_scripts": [
     {
       "matches": ["https://*.github.com/*"],
-      "js": ["dist/inject/inject.js"]
+      "js": ["dist/inject/inject.js"],
+      "css": ["css/styles.css"]
     }
   ]
 }

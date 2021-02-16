@@ -4,9 +4,13 @@ import browser, { tabs } from "webextension-polyfill";
 import { debounce } from "lodash-es";
 
 function _throttleInject(tabId) {
-  browser.tabs.executeScript(tabId, {
-    file: "dist/inject/inject.js",
-  });
+  try {
+    browser.tabs.executeScript(tabId, {
+      file: "dist/inject/inject.js",
+    });
+  } catch (exception) {
+    console.error(exception);
+  }
 }
 
 const throttleInject = debounce(_throttleInject, 16);
@@ -21,12 +25,18 @@ if (browser.tabs) {
   console.log("Registered tabs");
 }
 
-browser.runtime.onInstalled.addListener(function (object) {
-  chrome.tabs.create(
-    {
+browser.runtime.onInstalled.addListener(async function (object) {
+  const { os } = await browser.runtime.getPlatformInfo();
+
+  if (os === "mac") {
+    await browser.tabs.create({
+      url:
+        "https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/POST-INSTALL-MAC.md",
+    });
+  } else {
+    await browser.tabs.create({
       url:
         "https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/POST-INSTALL.md",
-    },
-    function (tab) {}
-  );
+    });
+  }
 });

@@ -1,0 +1,19 @@
+:root {
+  --peek-btn-background: #7737ff;
+  --peek-btn-background-hover: #632dd8;
+  --peek-btn-background-active: #672de2;
+  --peek-btn-color: white;
+}
+
+.btn-peek {
+  color: var(--peek-btn-color) !important;
+  background-color: var(--peek-btn-background) !important;
+}
+
+.btn-peek:hover {
+  background-color: var(--peek-btn-background-hover) !important;
+}
+
+.btn-peek:active {
+  background-color: var(--peek-btn-background-active) !important;
+}

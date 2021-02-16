@@ -19,3 +19,14 @@ Then, head over to the test page:
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/TEST-PAGE.md">
   <img src="./test-button-img.png" height="48" />
 </a>
+
+### Private repoistories
+
+To use Peek with a private repository, set your `$GITHUB_TOKEN` in `~/.git-peek`:
+
+```
+GITHUB_TOKEN="*******"
+EDITOR="code" # optional
+```
+
+Read more on the docs for [`git-peek`](https://github.com/jarred-sumner/git-peek).

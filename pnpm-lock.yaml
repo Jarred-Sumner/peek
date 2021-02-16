@@ -1,13 +1,23 @@
 dependencies:
   lodash-es: 4.17.20
+  path-browserify: 1.0.1
   webext-dynamic-content-scripts: 7.1.0
   zippack: 0.1.0
 devDependencies:
+  '@types/node': 14.14.28
   dotenv-cli: 4.0.0
   esbuild: 0.8.44
+  matchit: 1.1.0
+  typescript: 4.2.0-beta
   web-ext-types: 3.2.1
 lockfileVersion: 5.2
 packages:
+  /@arr/every/1.0.1:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-UQFQ6SgyJ6LX42W8rHCs8KVc0JS0tzVL9ct4XYedJukskYVWTo49tNiMEK9C2HTyarbNiT/RVIRSY82vH+6sTg==
   /@types/chrome/0.0.128:
     dependencies:
       '@types/filesystem': 0.0.29
@@ -33,6 +43,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-IG8AE1m2pWtPqQ7wXhFhy6Q59bwwnLwO36v5Rit2FrbXCIp8Sk8E2PfUCreyrdo17STwFSKDAkitVuVYbpEHvQ==
+  /@types/node/14.14.28:
+    dev: true
+    resolution:
+      integrity: sha512-lg55ArB+ZiHHbBBttLpzD07akz0QPrZgUODNakeC09i62dnrywr9mFErHuaPlB6I7z+sEbK+IYmplahvplCj2g==
   /archiver-utils/2.1.0:
     dependencies:
       glob: 7.1.6
@@ -270,6 +284,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+  /matchit/1.1.0:
+    dependencies:
+      '@arr/every': 1.0.1
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-+nGYoOlfHmxe5BW5tE0EMJppXEwdSf8uBA1GTZC7Q77kbT35+VKLYJMzVNWCHSsga1ps1tPYFtFyvxvKzWVmMA==
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
@@ -292,6 +314,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+  /path-browserify/1.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==
   /path-is-absolute/1.0.1:
     dev: false
     engines:
@@ -376,6 +402,13 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==
+  /typescript/4.2.0-beta:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-0nYjpkQ6bKjHoJTQkUHcDtGLNenqc5rfTcl3ISUnJXPkGa0115FcVJABmodfMKHLyDBmzDr8IGLbDv5m7sbYgw==
   /util-deprecate/1.0.2:
     dev: false
     resolution:
@@ -436,9 +469,13 @@ packages:
     resolution:
       integrity: sha512-zEmBA3Vxi8mRRjsJ+mB/yC5cErAtxQXot7RjBA4vjAKjK5B9RheHspMGJp09oDeRZLtFs2+bcWVNn+LFD8Kdjw==
 specifiers:
+  '@types/node': ^14.14.28
   dotenv-cli: ^4.0.0
   esbuild: ^0.8.44
   lodash-es: ^4.17.20
+  matchit: ^1.1.0
+  path-browserify: ^1.0.1
+  typescript: ^4.2.0-beta
   web-ext-types: ^3.2.1
   webext-dynamic-content-scripts: ^7.1.0
   zippack: ^0.1.0
