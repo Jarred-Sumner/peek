@@ -8,6 +8,8 @@
 .btn-peek {
   color: var(--peek-btn-color) !important;
   background-color: var(--peek-btn-background) !important;
+  display: flex !important;
+  align-items: center;
 }
 
 .btn-peek:hover {
@@ -16,4 +18,19 @@
 
 .btn-peek:active {
   background-color: var(--peek-btn-background-active) !important;
+}
+
+.btn-peek--spaced {
+  margin-right: 8px !important;
+}
+
+.icon-peek {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 8px;
+}
+
+.btn-peek-title {
+  margin-top: auto;
+  margin-bottom: auto;
 }

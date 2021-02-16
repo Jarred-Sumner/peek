@@ -1,6 +1,8 @@
-## Private repositories
+## Opening a private repository with Peek
 
-To use private repositories with Peek, you will need to stick your GitHub [Personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) like this in `$HOME/.git-peek`:
+To open a private repository with Peek, you will need to set a GitHub [personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+
+In `$HOME/.git-peek`:
 
 ```bash
 GITHUB_TOKEN="*******"

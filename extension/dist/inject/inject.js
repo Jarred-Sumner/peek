@@ -1002,9 +1002,6 @@
     });
   });
 
-  // src/inject/inject.ts
-  var import_webextension_polyfill = __toModule(require_browser_polyfill());
-
   // ../node_modules/.pnpm/@arr/every@1.0.1/node_modules/@arr/every/module.js
   function module_default(arr, cb) {
     var i = 0, len = arr.length;
@@ -1126,6 +1123,7 @@
   }
 
   // src/inject/inject.ts
+  var import_webextension_polyfill = __toModule(require_browser_polyfill());
   var RouteType;
   (function(RouteType2) {
     RouteType2[RouteType2["root"] = 0] = "root";
@@ -1135,6 +1133,59 @@
     RouteType2[RouteType2["file"] = 4] = "file";
     RouteType2[RouteType2["pullRequestFiles"] = 5] = "pullRequestFiles";
   })(RouteType || (RouteType = {}));
+  var PRIVATE_REPO_INSTRUCTIONS_KEY = "popups/private-repo-instructions";
+  function isPrivateRepo() {
+    return !!document.querySelector("h1 > .octicon-lock");
+  }
+  async function shouldShowPrivateRepoMessage() {
+    return !!await import_webextension_polyfill.default.storage.sync.get(PRIVATE_REPO_INSTRUCTIONS_KEY);
+  }
+  async function setShowedPrivateRepoMessage() {
+    return await import_webextension_polyfill.default.storage.sync.set({
+      [PRIVATE_REPO_INSTRUCTIONS_KEY]: true
+    });
+  }
+  var svg = `
+<svg
+  aria-hidden="true"
+  focusable="false"
+  height=18
+  width=12
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 384 512"
+  class="icon-peek"
+>
+  <path
+    fill="currentColor"
+    d="M186.1.09C81.01 3.24 0 94.92 0 200.05v263.92c0 14.26 17.23 21.39 27.31 11.31l24.92-18.53c6.66-4.95 16-3.99 21.51 2.21l42.95 48.35c6.25 6.25 16.38 6.25 22.63 0l40.72-45.85c6.37-7.17 17.56-7.17 23.92 0l40.72 45.85c6.25 6.25 16.38 6.25 22.63 0l42.95-48.35c5.51-6.2 14.85-7.17 21.51-2.21l24.92 18.53c10.08 10.08 27.31 2.94 27.31-11.31V192C384 84 294.83-3.17 186.1.09zM128 224c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm128 0c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"
+    class=""
+  ></path>
+</svg>`;
+  var addedHooks = new WeakMap();
+  async function addHooks(btn) {
+    btn.innerHTML = `
+    ${svg}
+    <span class="btn-peek-title">${BUTTON_TITLE}</span>
+  `;
+    if (!isPrivateRepo())
+      return;
+    let href = btn.getAttribute("href");
+    if (!href.includes("?")) {
+      href += "?noCDN";
+      btn.setAttribute("href", href);
+    } else if (!href.includes("noCDN")) {
+      href += "&noCDN";
+      btn.setAttribute("href", href);
+    }
+    if (addedHooks.has(btn) || didShowPrivateRepoMessage) {
+      return;
+    }
+    addedHooks.set(btn, true);
+    btn.addEventListener("click", onClickPrivateRepo, {
+      once: true,
+      passive: true
+    });
+  }
   function load() {
     const rootRepoRoute = parse("/:owner/:repo");
     const treeBaseRoute = parse("/:owner/:repo/tree/:ref");
@@ -1187,6 +1238,18 @@
     addButtons(routeType, params);
   }
   var BUTTON_TITLE = "Peek";
+  var didShowPrivateRepoMessage = false;
+  var PRIVATE_REPO_LINK = "https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/PRIVATE-REPOSITORIES.md#L1";
+  async function onClickPrivateRepo() {
+    if (!isPrivateRepo() || didShowPrivateRepoMessage)
+      return;
+    if (await shouldShowPrivateRepoMessage()) {
+      window.open(PRIVATE_REPO_LINK, "_blank");
+      await setShowedPrivateRepoMessage();
+      didShowPrivateRepoMessage = true;
+    }
+    didShowPrivateRepoMessage = true;
+  }
   function addButtons(route, params) {
     switch (route) {
       case 2:
@@ -1197,16 +1260,16 @@
             params.ref = branchText.textContent;
           }
         }
-        const repoOpenButton = document.querySelector('.file-navigation .btn[data-hotkey="t"]');
+        const repoOpenButton = document.querySelector(".file-navigation get-repo");
         if (repoOpenButton && !document.querySelector(".DEDUPE_git-peek-repo")) {
           var btn = document.createElement("a");
-          btn.innerHTML = BUTTON_TITLE;
-          btn.className = "btn DEDUPE_git-peek-repo btn-peek";
+          btn.className = "btn DEDUPE_git-peek-repo btn-peek btn-peek--spaced";
           if (params.ref) {
             btn.href = "git-peek://" + location.origin + `/${params.owner}/${params.repo}/tree/${params.ref}`;
           } else {
             btn.href = "git-peek://" + location.origin + location.pathname;
           }
+          addHooks(btn);
           repoOpenButton.parentElement.insertBefore(btn, repoOpenButton);
         }
         break;
@@ -1215,7 +1278,6 @@
         const repoOpenButton = document.querySelector('.btn[data-hotkey="t"]');
         if (repoOpenButton && !document.querySelector(".DEDUPE_git-peek-repo")) {
           var btn = document.createElement("a");
-          btn.innerHTML = BUTTON_TITLE;
           btn.className = "btn DEDUPE_git-peek-repo btn-peek";
           if (params.ref) {
             btn.href = "git-peek://" + location.origin + `/${params.owner}/${params.repo}/tree/${params.ref}`;
@@ -1223,6 +1285,7 @@
             btn.href = "git-peek://" + location.origin + location.pathname;
           }
           btn.style["marginRight"] = "8px";
+          addHooks(btn);
           repoOpenButton.parentElement.insertBefore(btn, repoOpenButton);
         }
         break;
@@ -1234,11 +1297,11 @@
           var container = document.createElement("div");
           container.className = "BtnGroup";
           var btn = document.createElement("a");
-          btn.innerHTML = BUTTON_TITLE;
           btn.className = "btn btn-sm DEDUPE_git-peek-file btn-peek";
           btn.href = "git-peek://" + window.location.href;
           btn.style.marginRight = "8px";
           container.appendChild(btn);
+          addHooks(btn);
           fileButton.parentElement.prepend(container);
         }
         break;
@@ -1251,16 +1314,19 @@
           } else {
             fileActions = fileHeaderNode.querySelector(".js-toggle-user-reviewed-file-form");
           }
-          const url = fileHeaderNode.querySelector(`*[data-ga-click="View file, click, location:files_changed_dropdown"]`)?.getAttribute("href");
+          let url = fileHeaderNode.querySelector(`*[data-ga-click="View file, click, location:files_changed_dropdown"]`)?.getAttribute("href");
           if (fileActions && url && !fileHeaderNode.querySelector(".DEDUPE_git-peek-fileaction")) {
             var container = document.createElement("div");
             container.className = "BtnGroup";
             var btn = document.createElement("a");
-            btn.innerHTML = BUTTON_TITLE;
             btn.className = "btn btn-sm DEDUPE_git-peek-fileaction btn-peek";
+            if (url.startsWith("/")) {
+              url = location.origin + url;
+            }
             btn.href = "git-peek://" + url;
             btn.style.marginRight = "8px";
             container.appendChild(btn);
+            addHooks(btn);
             fileActions.parentElement.prepend(container);
           }
         }
