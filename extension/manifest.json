@@ -1,8 +1,8 @@
 {
-  "name": "Peek for GitHub",
-  "version": "0.0.1",
+  "name": "peek – GitHub to local editor in 1 click",
+  "version": "0.0.2",
   "manifest_version": 2,
-  "description": "One-click from GitHub to editor",
+  "description": "Instantly open repositories, pull requests, and files to your local editor. peek stores code in a temporary folder that automatically deletes after your editor closes.",
   "homepage_url": "https://github.com/Jarred-Sumner/git-peek-chrome-extension",
   "icons": {
     "16": "icons/icon16.png",
