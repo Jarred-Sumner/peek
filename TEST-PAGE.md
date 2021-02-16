@@ -6,8 +6,4 @@ To use `git-peek`, with private repositories, [configure your environment](https
 
 If you want to configure git-peek, header over to the main [git-peek repo](https://github.com/Jarred-Sumner/git-peek).
 
-<embed>
-
-If you're seeing this message, it means it worked.
-
-</embed>
+<html>If you're seeing this message, it means it worked.</html>
