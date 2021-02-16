@@ -1186,21 +1186,21 @@
       passive: true
     });
   }
+  var rootRepoRoute = parse("/:owner/:repo");
+  var treeBaseRoute = parse("/:owner/:repo/tree/:ref");
+  var fileRoute = parse("/:owner/:repo/tree/:ref/*");
+  var rootFileRoute = parse("/:owner/:repo/blob/:ref/:filename");
+  var blobFileRoute = parse("/:owner/:repo/blob/:ref/*");
+  var pullRequestCodeRoute = parse("/:owner/:repo/pull/:pullRequestID/files");
+  var routes = [
+    rootRepoRoute,
+    treeBaseRoute,
+    fileRoute,
+    pullRequestCodeRoute,
+    rootFileRoute,
+    blobFileRoute
+  ];
   function load() {
-    const rootRepoRoute = parse("/:owner/:repo");
-    const treeBaseRoute = parse("/:owner/:repo/tree/:ref");
-    const fileRoute = parse("/:owner/:repo/tree/:ref/*");
-    const rootFileRoute = parse("/:owner/:repo/blob/:ref/:filename");
-    const blobFileRoute = parse("/:owner/:repo/blob/:ref/*");
-    const pullRequestCodeRoute = parse("/:owner/:repo/pull/:pullRequestID/files");
-    const routes = [
-      rootRepoRoute,
-      treeBaseRoute,
-      fileRoute,
-      pullRequestCodeRoute,
-      rootFileRoute,
-      blobFileRoute
-    ];
     const matcher = match(location.pathname, routes);
     let routeType;
     switch (matcher) {
@@ -1338,6 +1338,7 @@
   window.addEventListener("popstate", () => requestAnimationFrame(load));
   window.addEventListener("replaceState", () => requestAnimationFrame(load));
   requestAnimationFrame(load);
+  setTimeout(load, 100);
   import_webextension_polyfill.default.runtime.onMessage.addListener(() => {
     requestAnimationFrame(load);
   });

@@ -81,22 +81,23 @@ async function addHooks(btn: HTMLElement) {
   });
 }
 
-function load() {
-  const rootRepoRoute = parse("/:owner/:repo");
-  const treeBaseRoute = parse("/:owner/:repo/tree/:ref");
-  const fileRoute = parse("/:owner/:repo/tree/:ref/*");
-  const rootFileRoute = parse("/:owner/:repo/blob/:ref/:filename");
-  const blobFileRoute = parse("/:owner/:repo/blob/:ref/*");
-  const pullRequestCodeRoute = parse("/:owner/:repo/pull/:pullRequestID/files");
-  const routes = [
-    rootRepoRoute,
-    treeBaseRoute,
-    fileRoute,
-    pullRequestCodeRoute,
-    rootFileRoute,
-    blobFileRoute,
-  ];
+const rootRepoRoute = parse("/:owner/:repo");
+const treeBaseRoute = parse("/:owner/:repo/tree/:ref");
+const fileRoute = parse("/:owner/:repo/tree/:ref/*");
+const rootFileRoute = parse("/:owner/:repo/blob/:ref/:filename");
+const blobFileRoute = parse("/:owner/:repo/blob/:ref/*");
+const pullRequestCodeRoute = parse("/:owner/:repo/pull/:pullRequestID/files");
 
+const routes = [
+  rootRepoRoute,
+  treeBaseRoute,
+  fileRoute,
+  pullRequestCodeRoute,
+  rootFileRoute,
+  blobFileRoute,
+];
+
+function load() {
   const matcher = match(location.pathname, routes);
 
   let routeType: RouteType;
@@ -296,6 +297,8 @@ window.addEventListener("DOMContentLoaded", () => requestAnimationFrame(load));
 window.addEventListener("popstate", () => requestAnimationFrame(load));
 window.addEventListener("replaceState", () => requestAnimationFrame(load));
 requestAnimationFrame(load);
+
+setTimeout(load, 100);
 
 browser.runtime.onMessage.addListener(() => {
   requestAnimationFrame(load);
