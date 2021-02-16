@@ -25,18 +25,20 @@ if (browser.tabs) {
   console.log("Registered tabs");
 }
 
-browser.runtime.onInstalled.addListener(async function (object) {
-  const { os } = await browser.runtime.getPlatformInfo();
+browser.runtime.onInstalled.addListener(async function ({ reason }) {
+  if (reason == "install") {
+    const { os } = await browser.runtime.getPlatformInfo();
 
-  if (os === "mac") {
-    await browser.tabs.create({
-      url:
-        "https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/POST-INSTALL-MAC.md",
-    });
-  } else {
-    await browser.tabs.create({
-      url:
-        "https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/POST-INSTALL.md",
-    });
+    if (os === "mac") {
+      await browser.tabs.create({
+        url:
+          "https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/POST-INSTALL-MAC.md",
+      });
+    } else {
+      await browser.tabs.create({
+        url:
+          "https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/POST-INSTALL.md",
+      });
+    }
   }
 });

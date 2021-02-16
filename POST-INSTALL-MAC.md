@@ -20,7 +20,7 @@ Then, head over to the test page:
   <img src="./test-button-img.png" height="48" />
 </a>
 
-### Private repoistories
+### Private repositories
 
 To use Peek with a private repository, set `$GITHUB_TOKEN` in `~/.git-peek`:
 
