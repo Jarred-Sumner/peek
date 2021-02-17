@@ -10,7 +10,7 @@ git-peek stores the files in a temporary directory, and automatically deletes th
 
 ## [Download peek for Firefox](https://addons.mozilla.org/en-US/firefox/addon/git-peek-for-github/)
 
-Supports Visual Studio Code and Sublime Text on Windows & macOS. Probably not vim, unless its a GUI version.
+Supports Visual Studio Code, Vim, and Sublime Text on Windows & macOS.
 
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/screenshot-1.png?raw=true"><img src="./screenshot-1.png" height=200 /></a>
 <a href="https://github.com/Jarred-Sumner/1-click-from-github-to-editor/blob/main/screenshot-2.png?raw=true"><img src="./screenshot-2.png" height=200 /></a>
