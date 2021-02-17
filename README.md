@@ -6,7 +6,7 @@ Instantly open files, pull requests, and repositories from GitHub in your local 
 
 git-peek stores the files in a temporary directory, and automatically deletes the repository from your computer when you close your editor. [git-peek](https://github.com/Jarred-Sumner/git-peek) is also available as a CLI, this is the browser extension.
 
-## [Download peek for Chrome](https://github.com/Jarred-Sumner/peek/releases/download/0.0.2/chrome.zip)
+## [Download peek for Chrome](https://chrome.google.com/webstore/detail/peek-%E2%80%93-github-to-local-ed/lipffmbhaajmndiglgmmcfldgolfaooj)
 
 <sup>Then **extract the `.zip`** and drag and drop the folder into `chrome://extensions`</sup>
 
