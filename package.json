@@ -11,6 +11,7 @@
     "lodash-es": "^4.17.20",
     "path-browserify": "^1.0.1",
     "webext-dynamic-content-scripts": "^7.1.0",
+    "webextension-polyfill": "^0.10.0",
     "zippack": "^0.1.0"
   },
   "scripts": {
