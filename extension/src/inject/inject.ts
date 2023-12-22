@@ -24,6 +24,7 @@ function isPrivateRepo() {
   const isPrivate =
     !!document.querySelector("h1 > .octicon-lock") ||
     !!document.querySelector("header .octicon-lock");
+  console.debug("[peek]", { isPrivate });
   return isPrivate;
 }
 
@@ -176,7 +177,7 @@ function addButtons(route: RouteType, params: ParamsList) {
           "#branch-select-menu .btn .css-truncate-target"
         );
         const ref = branchText?.textContent;
-          params.ref = branchText.textContent;
+        console.debug("[peek]", { branchText, ref });
         if (ref) {
           params.ref = ref;
         }
@@ -184,8 +185,10 @@ function addButtons(route: RouteType, params: ParamsList) {
       const repoOpenButton =
         document.querySelector(".file-navigation get-repo") ||
         document.querySelector("#\\:r5\\:");
+        console.debug("[peek]", { repoOpenButton });
 
       if (repoOpenButton && !document.querySelector(".DEDUPE_git-peek-repo")) {
+        console.debug("[peek] adding button");
         var btn = document.createElement("a");
         btn.className = "btn DEDUPE_git-peek-repo btn-peek btn-peek--spaced";
         if (params.ref) {
