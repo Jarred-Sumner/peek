@@ -21,7 +21,10 @@ type ParamsList = {
 const PRIVATE_REPO_INSTRUCTIONS_KEY = "popups/private-repo-instructions";
 
 function isPrivateRepo() {
-  return !!document.querySelector("h1 > .octicon-lock");
+  const isPrivate =
+    !!document.querySelector("h1 > .octicon-lock") ||
+    !!document.querySelector("header .octicon-lock");
+  return isPrivate;
 }
 
 async function shouldShowPrivateRepoMessage() {
@@ -172,13 +175,15 @@ function addButtons(route: RouteType, params: ParamsList) {
         const branchText = document.querySelector(
           "#branch-select-menu .btn .css-truncate-target"
         );
-        if (branchText) {
+        const ref = branchText?.textContent;
           params.ref = branchText.textContent;
+        if (ref) {
+          params.ref = ref;
         }
       }
-      const repoOpenButton = document.querySelector(
-        ".file-navigation get-repo"
-      );
+      const repoOpenButton =
+        document.querySelector(".file-navigation get-repo") ||
+        document.querySelector("#\\:r5\\:");
 
       if (repoOpenButton && !document.querySelector(".DEDUPE_git-peek-repo")) {
         var btn = document.createElement("a");
